@@ -40,5 +40,5 @@ Letter Grade to GPA Conversion***
 
 
 COLOR PALLET 
-background-color: #17171b
-div colors: #2d2d2d
+background-color: #100e19
+div colors: #171924
