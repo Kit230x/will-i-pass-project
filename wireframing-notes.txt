@@ -1,0 +1,44 @@
+Grade Calculator
+
+Easy Grader 
+- # of Questions 
+- (Optional) Points worth 
+- # Wrong 
+-> Result __ / __ = __%
+* Show Decimals [ ] Show Decimals [ ]
+
+Average Grade (%)
+
+
+Final Grade Calculator
+- Current Grade
+- Target Grade 
+- Optional *Midterms/Exams* 
+- Final Exam Weight
+
+
+
+GPA Calculator 
+*Letters | Percentage | Weighted GPA 
+- Current GPA 
+- Target GPA 
+- Current Credits
+- Additional Credits 
+ADD ROW
+
+[ = Calculate ] [ Reset ]
+
+Additional GPA/Grade needed to get target (Addition credits at an A to get target GPA)
+
+
+Additional Features 
+- Export to Excel
+- Export to PDF 
+- Import PDF / Excel (must be the same format though as ther way it is exported )
+
+Letter Grade to GPA Conversion***
+
+
+COLOR PALLET 
+background-color: #17171b
+div colors: #2d2d2d
