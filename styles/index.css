@@ -1,6 +1,17 @@
 
 
+/* Wild Card */
+* {
+    box-sizing: border-box;
+}
 
-.main-container {
-    background-color: #100e19"
+/* HTML Element CSS Styling */
+html, body {
+    margin: 0;
+    padding: 0;
+}
+
+hr {
+    border: 0.25px solid rgba(180, 180, 180, 0.67);
+    width: 100%;
 }

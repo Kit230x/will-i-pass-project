@@ -1,64 +1,149 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="utf-8">
-        <link rel="stylesheet" href="styles/index.css">
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible+Mono:ital,wght@0,200..800;1,200..800&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="styles/index.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible+Mono:ital,wght@0,200..800;1,200..800&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 
-        <title>Will I Pass? - Grade and GPA Calculator</title>
+    <title>Will I Pass? - Grade and GPA Calculator</title>
 
-        <!-- TEMP STYLE LOCATIONS -->
-        <style>
-
+    <style>
         * {
             box-sizing: border-box;
         }
 
-        body {
-            background-color: #100e19;
+        html, body {
+            margin: 0;
+            padding: 0;
         }
 
-        /* NAVIGATION */
-        .nav {
-            background-color: #171924;
-            border-radius: 15px;
-            padding: 20px;
-            margin: 10px;
+        hr {
+            border: 0.25px solid rgba(180, 180, 180, 0.67);
+            width: 100%;
+        }
+
+        /* Main container styling */
+        .main-container {
+            background-color: snow;
+            position: fixed;
+            top: 16px;
+            left: 16px;
+            right: 16px;
+            bottom: 16px;
         }
 
         .nav-container {
-            max-width: 1200px;
+            display: block;
+            width: 100%;
+            height: 60px;
+            margin: 0;
         }
 
-        .n-text {
-            color: rgb(223, 223, 223);
-            padding: 25px;
-            opacity: 0.95;
+        /* Logo section styling */
+        .nav-logo-section {
+            display: inline-block;
+        }
+
+        /* Flex container to push button to the right */
+        .nav-dropdown-container {
+            display: flex;
+            justify-content: flex-end; /* Aligns everything to the right */
+            width: 100%; /* Ensures the container takes full width */
+        }
+
+        /* Dropdown button styling */
+        .nav-dropdown button {
+            cursor: pointer;
+            border: none;
+            padding: 15px 20px;
+            color: #333;
+            background-color: white;
+            font-size: 2em; /* Larger lines for the hamburger */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 25px;
+        }
+
+        /* Dropdown links styling */
+        .nav-dropdown a {
+            display: block;
             text-decoration: none;
+            padding: 10px 15px;
+            color: #333;
         }
 
-        </style>
-    </head>
+        /* Dropdown menu container with relative positioning for parent */
+        .nav-dropdown {
+            position: relative; /* Ensures the dropdown content is positioned relative to this container */
+        }
 
-    <body>
+        .nav-dropdown .nav-dropdown-content {
+            background-color: whitesmoke;
+            position: absolute;
+            top: 50px; /* Moves the dropdown below the hamburger button */
+            right: 10px; /* Aligns the dropdown to the right of the button */
+            min-width: 200px;
+            box-shadow: 2px 2px 5px snow;
+            display: none; /* Initially hidden */
+            z-index: 10; /* Ensures dropdown appears above other content */
+        }
 
-        <!-- MAIN NAV BOX -->
-        <div class="nav">
-            <div class="nav-container">
-                <div class="nav-text">
-                    <a href="index.html" class="n-text">Will I Pass? - Grade and GPA Calculator</a>
+        /* Hover effect for dropdown links */
+        .nav-dropdown a:hover {
+            background-color: rgba(241, 241, 241, 0.669);
+            border-left: 4px solid #333;
+        }
+
+        /* Show the dropdown when the button is clicked */
+        .nav-dropdown.active .nav-dropdown-content {
+            display: block;
+        }
+
+
+        .website-title h1 {
+            display: inline-block;
+            justify-content: left;
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <!-- MAIN NAV BOX -->
+    <nav class="nav-container">
+        <div class="nav-content">
+
+
+            <!-- Dropdown container aligned to the right -->
+            <div class="nav-dropdown-container">
+                <div class="website-title">
+                    <h1>Title</h1>
+                </div>
+                    <div class="nav-dropdown">
+                        <button id="dropdownBtn">&equiv;</button>
+
+                        <!-- Dropdown menu items -->
+                        <div class="nav-dropdown-content" id="dropdownCont">
+                            <a href="#">Grade Calculator</a>
+                            <a href="#">GPA Calculator</a>
+                            <a href="#">Final Grade Calculator</a>
+                            <a href="#">Semester Grade Calculator</a>
+                            <a href="#">Test Grade Calculator</a>
+                            <a href="#">GPA Grading Scale</a>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
+    </nav><hr>
 
-        <!-- MAIN BODY CONTAINER -->
-        <main>
-        
-            <div class="main-container">
+    <!-- MAIN BODY CONTAINER -->
 
-            </div>
-        </main>
-    </body>
+    <!-- Link to the external JavaScript file -->
+    <script src="script/dropdown.js"></script>
+</body>
 </html>
